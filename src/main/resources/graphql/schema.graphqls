@@ -1,0 +1,23 @@
+type Query{
+    basicInfo: [BasicInfo]
+    basicInfoByStartYear(year: String): [BasicInfo]
+}
+
+type BasicInfo {
+    id: ID
+    titleType: String
+    primaryTitle: String
+    originalTitle: String
+    isAdult: Boolean
+    startYear: String
+    endYear: String
+    runtimeMinutes: String
+    genres: String
+    rating: Rating
+}
+
+type Rating {
+    id: ID
+    averageRating: Float
+    numVotes: Int
+}
